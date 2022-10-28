@@ -1,0 +1,14 @@
+<div class="filter">
+    <form class="example-form">
+        <br/>
+        <div *ngIf="isDestination()==false"><P> Où allez vous?</P>
+        <p><mat-form-field appearance="fill"><input matInput>
+    </mat-form-field></p><br/></div>
+    <div *ngIf="isDestination()"><P> Veuillez indiquer votre ville lieu de départ :</P>
+        <p><mat-form-field appearance="fill"><input matInput>
+    </mat-form-field></p><br/></div>
+    <p>
+        <button mat-button (click)="putPlace()">Valider</button>
+    </p><br/>
+    </form>
+</div>
