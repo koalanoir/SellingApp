@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { AuthModule } from '@auth0/auth0-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +29,13 @@ import { LouerComponent } from './louer/louer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    AuthModule.forRoot({
+      domain: 'dev-cjxhb-x9.eu.auth0.com',
+      clientId: 'FRN00astHF7aUUKfIrb9bEbFmk2ZMDII'
+    }),    
+    FormsModule, BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

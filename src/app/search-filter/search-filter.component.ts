@@ -1,31 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-search-filter',
   templateUrl: './search-filter.component.html',
   styleUrls: ['./search-filter.component.scss']
 })
 export class SearchFilterComponent implements OnInit {
-  public destination:string="";
-  public depart:string="";
-  public valider:boolean=false;
-  constructor() { 
+   destination!: string;
+  constructor(  private route: ActivatedRoute,
+    private router: Router  ) { 
   }
 
   ngOnInit(): void {
 
   }
   
-  isDestination():boolean{
-    return this.valider
-  }
 
-  putPlace():void{
-    if( this.isDestination()==false ){
-      this.valider=true
-      
-    }else{
-
-    }
+  shop(destination:string){
+    this.router.navigate(['/Shop', { destination : destination }]);
   }
 }

@@ -10,8 +10,12 @@ a{
   color: black;
 }
 
-a:hover
+a:hover ,.login button:hover
 {
-  background-color: cadetblue;
+  background-color: rgb(160, 95, 95);
 }
 
+.login button{
+  border: none;
+  background-color: transparent;
+}

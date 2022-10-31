@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./louer.component.scss']
 })
 export class LouerComponent implements OnInit {
-
+  cick:boolean
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  reservation(){
+    this.cick=true
+  }
+  isClick(){
+    return this.cick
+  }
 }

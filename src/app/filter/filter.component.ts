@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-filter',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
+  resultat:boolean;
+  constructor( private route: ActivatedRoute,
+    private router: Router  ) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {   
   }
 
+  recherher(){
+    this.router.navigate(['/Louer']);
+  }
 }

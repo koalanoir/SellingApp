@@ -1,6 +1,9 @@
 <span class='back'><app-tabs></app-tabs>
 <body>
     <br/>
+    <div *ngIf="auth.user$ | async as user">
+        Salut {{ user.name }},
+    </div>`
     <br/>Bienvenu sur le site numéro 1 de réservations de transports au congo Brazzaville
 </body>
 <div class="searchf"><app-search-filter></app-search-filter></div>

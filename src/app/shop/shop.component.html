@@ -1,3 +1,9 @@
-<span class='shop'><app-tabs></app-tabs>
+<span class='shop'><app-tabs></app-tabs><body>
     <div class="filtre"><app-filter></app-filter></div>
-    </span>
+    <div class="resultat" *ngIf="resultat()"> 
+        <label> Voici les trajets correspondant à votre recherche</label> 
+        <div></div>
+
+    </div>
+</body>
+</span>

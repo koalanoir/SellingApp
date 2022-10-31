@@ -18,11 +18,24 @@
       </a>
     </div>
     <div>
-      <a routerLink="/Louer" routerLinkActive="active" >
+      <a routerLink="/Contact" routerLinkActive="active" >
         Nous contacter
       </a>
     </div>
-  </div>
+    <div class="login">
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+      
+      <button (click)="auth.logout({ returnTo: document.location.origin })">
+        Se Déconnecter
+      </button>
+    </ng-container>
+
+    <ng-template #loggedOut>
+      <button (click)="auth.loginWithRedirect()">Se Connecter</button>
+    </ng-template>
+    </div>
+
+    </div>
     
   </mat-toolbar>
   </p>
