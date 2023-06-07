@@ -14,6 +14,7 @@ import { ShopComponent } from './shop/shop.component';
 import { SellComponent } from './sell/sell.component';
 import { FilterComponent } from './filter/filter.component';
 import { LouerComponent } from './louer/louer.component';
+import { FooeterComponent } from './fooeter/fooeter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { LouerComponent } from './louer/louer.component';
     SellComponent,
     FilterComponent,
     LouerComponent,
+    FooeterComponent
   ],
   imports: [
     BrowserModule,
